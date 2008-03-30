@@ -1,0 +1,8 @@
+#summary Building PuTTYcyg
+#labels Featured
+
+The source of recent versions of PuTTYcyg (from 2007 and later) is released as a gzipped patch file.  The patch file itself is actually a shell script which can automagically download the [http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html PuTTY source], patch it, and build PuTTYcyg (putty.exe and cthelper.exe).  Building it requires Cygwin with make, gcc-mingw, perl, and patch installed.  If you're feeling lucky:
+
+{{{
+zcat putty-0.60-cygterm-20071011.patch.gz | sh
+}}}
