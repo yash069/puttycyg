@@ -1,4 +1,5 @@
 #summary README file for PuTTYcyg
+#labels Featured
 {{{
 This is the README for PuTTYcyg.
 
