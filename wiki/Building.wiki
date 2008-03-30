@@ -7,7 +7,7 @@ The released source packages of recent versions of PuTTYcyg (from 2007 and later
 zcat putty-0.60-cygterm-20071202.patch.gz | sh
 }}}
 
-If you're building from the repository, use these commands instead:
+If you're building from the repository, instead use these commands from the `putty-0.60` directory:
 
 {{{
 perl mkfiles.pl
