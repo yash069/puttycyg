@@ -1,0 +1,24 @@
+#summary Frequently Asked Questions
+#labels Featured
+
+== How do I make a shortcut to run PuTTYcyg?
+
+Use this command line:
+{{{
+C:\path\to\puttycyg.exe -cygterm -
+}}}
+or use a saved session:
+{{{
+C:\path\to\puttycyg.exe -load Local
+}}}
+The [http://the.earth.li/~sgtatham/putty/docs.html PuTTY documentation] has more information about how to use sessions.
+
+== I have a non-Cygwin program which doesn't work under certain circumstances. What's wrong?
+
+PuTTYcyg is not a Windows console replacement program, it is a local terminal emulator for Cygwin programs and therefore is only meant to work with Cygwin programs. Some Windows console programs will work most of the time. However, since PuTTYcyg does not provide a Windows console device, these console programs will break as soon as they try to access it (for example by trying to change the ENABLE_ECHO_INPUT setting via the SetConsoleMode() API function). PuTTYcyg provides a POSIX pty in the Cygwin environment; it does not provide a Windows console device.
+
+There are some excellent technical documents which explain why (non-Cygwin) Windows console programs don't work well in the absence of a Windows console device:
+
+    * [http://www.cygwin.com/ml/cygwin/2003-12/msg00575.html Noncygwin programs wait for buffer to fill before outputting to ssh]
+    * [http://homepages.tesco.net/~J.deBoynePollard/FGA/capture-console-win32.html Capturing console I/O in Win32]
+    * [http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/win-command-prompt.html PuTTY wish win-command-prompt]
