@@ -22,3 +22,6 @@ There are some excellent technical documents which explain why (non-Cygwin) Wind
     * [http://www.cygwin.com/ml/cygwin/2003-12/msg00575.html Noncygwin programs wait for buffer to fill before outputting to ssh]
     * [http://homepages.tesco.net/~J.deBoynePollard/FGA/capture-console-win32.html Capturing console I/O in Win32]
     * [http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/win-command-prompt.html PuTTY wish win-command-prompt]
+
+== Troubleshooting: "Invalid Port number" ==
+If the session registry has an old configuration, PuTTYcyg may not start properly.  Changing the `PortNumber` setting in `HKEY_CURRENT_USER\SOFTWARE\SimonTatham\PuTTY\Sessions\_SESSION_` to `1` should solve the problem.
