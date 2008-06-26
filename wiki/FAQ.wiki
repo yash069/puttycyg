@@ -5,11 +5,11 @@
 
 Use this command line:
 {{{
-C:\path\to\puttycyg.exe -cygterm -
+C:\path\to\putty.exe -cygterm -
 }}}
 or use a saved session:
 {{{
-C:\path\to\puttycyg.exe -load Local
+C:\path\to\putty.exe -load Local
 }}}
 The [http://the.earth.li/~sgtatham/putty/docs.html PuTTY documentation] has more information about how to use sessions.
 
