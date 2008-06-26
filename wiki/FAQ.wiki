@@ -2,7 +2,6 @@
 #labels Featured
 
 == How do I make a shortcut to run PuTTYcyg? ==
-
 Use this command line:
 {{{
 C:\path\to\putty.exe -cygterm -
@@ -13,8 +12,7 @@ C:\path\to\putty.exe -load Local
 }}}
 The [http://the.earth.li/~sgtatham/putty/docs.html PuTTY documentation] has more information about how to use sessions.
 
-== I have a non-Cygwin program which doesn't work under certain circumstances. What's wrong? ==
-
+== I have a non-Cygwin program which doesn't work under certain circumstances.  What's wrong? ==
 PuTTYcyg is not a Windows console replacement program, it is a local terminal emulator for Cygwin programs and therefore is only meant to work with Cygwin programs.  _Some_ Windows console programs will work _most_ of the time.  However, since PuTTYcyg does not provide a Windows console device, these console programs will break as soon as they try to access it (for example by trying to change the `ENABLE_ECHO_INPUT` setting via the `SetConsoleMode()` API function).  PuTTYcyg provides a POSIX pty in the Cygwin environment; it does not provide a Windows console device.
 
 There are some excellent technical documents which explain why (non-Cygwin) Windows console programs don't work well in the absence of a Windows console device:
@@ -23,5 +21,13 @@ There are some excellent technical documents which explain why (non-Cygwin) Wind
     * [http://homepages.tesco.net/~J.deBoynePollard/FGA/capture-console-win32.html Capturing console I/O in Win32]
     * [http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/win-command-prompt.html PuTTY wish win-command-prompt]
 
+== I recently upgraded Cygwin, and now PuTTYcyg no longer works. ==
+The problem may be multiple copies of `cygwin1.dll`.  See [http://cygwin.com/faq/faq-nochunks.html#faq.using.multiple-copies the Cygwin FAQ].
+
 == Troubleshooting: "Invalid Port number" ==
 If the session registry has an old configuration, PuTTYcyg may not start properly.  Changing the `PortNumber` setting in `HKEY_CURRENT_USER\SOFTWARE\SimonTatham\PuTTY\Sessions\_SESSION_` to `1` should solve the problem.
+
+== Other questions ==
+For questions specific to PuTTYcyg, please feel free to [http://code.google.com/p/puttycyg/issues/entry create an issue].
+
+Please consult the [http://cygwin.com/faq.html Cygwin FAQ] or the [http://www.chiark.greenend.org.uk/~sgtatham/putty/faq.html PuTTY FAQ] for questions not directly related to PuTTYcyg.
