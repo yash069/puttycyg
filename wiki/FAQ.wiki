@@ -2,14 +2,20 @@
 #labels Featured
 
 == How do I make a shortcut to run PuTTYcyg? ==
-Use this command line:
+Use this command line (_Target:_)
 {{{
 C:\path\to\putty.exe -cygterm -
 }}}
-or use a saved session:
+or use a saved session, e.g.:
 {{{
 C:\path\to\putty.exe -load Local
 }}}
+Optional: set the working directory (_Start in:_) to your Cygwin installation's `/bin` directory: e.g.:
+{{{
+C:\Cygwin-1.7\bin
+}}}
+As of PuTTYcyg version 20090508, setting the working directory will allow you to turn off the _Autodetect Cygwin Installation_ and use multiple Cygwin installations on your system.
+
 The [http://the.earth.li/~sgtatham/putty/docs.html PuTTY documentation] has more information about how to use sessions.
 
 == I have a non-Cygwin program which doesn't work under certain circumstances.  What's wrong? ==
