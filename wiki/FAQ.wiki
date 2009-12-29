@@ -33,6 +33,9 @@ The problem may be multiple copies of `cygwin1.dll`.  See [http://cygwin.com/faq
 == Troubleshooting: "Invalid Port number" ==
 If the session registry has an old configuration, PuTTYcyg may not start properly.  Changing the `PortNumber` setting in `HKEY_CURRENT_USER\SOFTWARE\SimonTatham\PuTTY\Sessions\_SESSION_` to `1` should solve the problem.
 
+== Troubleshooting: "The procedure entry point __assert_func could not be located in the dynamic link library cygwin1.dll" ==
+This is a sure sign that your Cygwin installation predates 1.7.  Please upgrade to Cygwin 1.7 or use [http://puttycyg.googlecode.com/files/puttycyg-20071202.zip the last PuTTYcyg version which supports Cygwin 1.5 (20071202)].
+
 == Other questions ==
 For questions specific to PuTTYcyg, please feel free to [http://code.google.com/p/puttycyg/issues/entry create an issue].
 
