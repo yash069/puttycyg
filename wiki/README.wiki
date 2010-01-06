@@ -1,7 +1,5 @@
-#summary README file for PuTTYcyg
+#summary _Contents of [http://puttycyg.googlecode.com/svn-history/r8/trunk/putty-0.60/windows/cthelper/README.txt README.txt]_
 #labels Featured
-
-_Contents of [http://puttycyg.googlecode.com/svn-history/r8/trunk/putty-0.60/windows/cthelper/README.txt README.txt]_
 
 {{{
 This is the README for PuTTYcyg.
