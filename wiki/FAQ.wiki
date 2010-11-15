@@ -27,8 +27,13 @@ There are some excellent technical documents which explain why (non-Cygwin) Wind
     * [http://homepages.tesco.net/~J.deBoynePollard/FGA/capture-console-win32.html Capturing console I/O in Win32]
     * [http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/win-command-prompt.html PuTTY wish win-command-prompt]
 
-== I recently upgraded Cygwin, and now PuTTYcyg no longer works. ==
-The problem may be multiple copies of `cygwin1.dll`.  See [http://cygwin.com/faq/faq-nochunks.html#faq.using.multiple-copies the Cygwin FAQ].
+== Startup is really slow. ==
+This could be due to bash loading slowly.  Try launching PuTTYcyg with Command set to `bash --noprofile --norc`.  If this is faster, run PuTTYcyg with `bash -v` to see which parts of your bash setup are slow.
+
+This could also be a problem with local firewall software.  PuTTYcyg uses a local TCP port to communicate between putty.exe and cthelper.exe.
+
+== PuTTYcyg "doesn't work". ==
+If you get a strange error message or if PuTTYcyg hangs as soon as you launch a Cygterm session (but works fine with SSH), the problem may be multiple copies of `cygwin1.dll`.  See [http://cygwin.com/faq/faq-nochunks.html#faq.using.multiple-copies the Cygwin FAQ] and search your system for multiple copies of this file.
 
 == Troubleshooting: "Invalid Port number" ==
 If the session registry has an old configuration, PuTTYcyg may not start properly.  Changing the `PortNumber` setting in `HKEY_CURRENT_USER\SOFTWARE\SimonTatham\PuTTY\Sessions\_SESSION_` to `1` should solve the problem.
