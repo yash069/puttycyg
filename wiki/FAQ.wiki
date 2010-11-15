@@ -28,7 +28,7 @@ There are some excellent technical documents which explain why (non-Cygwin) Wind
     * [http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/win-command-prompt.html PuTTY wish win-command-prompt]
 
 == Startup is really slow. ==
-This could be due to [/p/puttycyg/issues/detail?id=50 bash loading slowly].  Try launching PuTTYcyg with Command set to `bash --noprofile --norc`.  If this is faster, run PuTTYcyg with `bash -v` to see which parts of your bash setup are slow. 
+This could be due to [http://code.google.com/p/puttycyg/issues/detail?id=50 bash loading slowly].  Try launching PuTTYcyg with Command set to `bash --noprofile --norc`.  If this is faster, run PuTTYcyg with `bash -v` to see which parts of your bash setup are slow. 
 
 This could also be a problem with local firewall software.  PuTTYcyg uses a local TCP port to communicate between putty.exe and cthelper.exe.
 
